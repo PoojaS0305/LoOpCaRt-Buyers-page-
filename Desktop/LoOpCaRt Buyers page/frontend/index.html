@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoopCart - Best Deals Everyday</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>🛒 LoopCart</h2>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="Search for products..." id="searchInput">
+                <button onclick="searchProducts()">🔍</button>
+            </div>
+            <div class="nav-links">
+                
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="cart.html" class="nav-link">Cart (<span id="cartCount">0</span>)</a>
+                <button id="loginBtn" class="nav-login">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find the Best Deals Everyday!</h1>
+                <p>Discover amazing products at unbeatable prices. Quality meets affordability.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="location.href='products.html'">Shop Now →</button>
+                    <button class="btn-secondary" onclick="scrollToCategories()">Explore Categories</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="filterByCategory('Electronics')">
+                    <div class="category-icon">📱</div>
+                    <h3>Electronics</h3>
+                    <p>Latest tech gadgets</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('Clothing')">
+                    <div class="category-icon">👕</div>
+                    <h3>Clothing</h3>
+                    <p>Trendy fashion</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('Books')">
+                    <div class="category-icon">📚</div>
+                    <h3>Books</h3>
+                    <p>Knowledge hub</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('Furniture')">
+                    <div class="category-icon">🪑</div>
+                    <h3>Furniture</h3>
+                    <p>Eco-friendly</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('Second Hand')">
+                    <div class="category-icon">🔄</div>
+                    <h3>Second Hand</h3>
+                    <p>Quality used items</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Welcome to LoopCart</h2>
+            <p>Enter your details to continue</p>
+            <form id="loginForm">
+                <input type="text" placeholder="Your Name" id="userName" required>
+                <input type="email" placeholder="Email Address" id="userEmail" required>
+                <button type="submit" class="btn-primary">Start Shopping →</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
